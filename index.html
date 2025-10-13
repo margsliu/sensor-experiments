@@ -21,7 +21,7 @@
     <ul>
         <li><a href="#experiment1">Experiment #1: Laser beam detection by photocell activates LED</a></li>
         <li><a href="#experiment2">Experiment #2: Laser beam detection by photocell activates LED + buzzer</a></li>
-        <li><a href="#experiment3">Experiment #3</a></li>
+        <li><a href="#experiment3">Experiment #3: Temperature/Humidity sensor and two-colour LED indicator</a></li>
         <li><a href="#experiment4">Experiment #4</a></li>
         <li><a href="#experiment5">Experiment #5</a></li>
     </ul>
@@ -51,6 +51,7 @@
     <p><a href="#top">(↑)</a></p>
 
     <h2 id="experiment2">Experiment #2: Solo reverse laser harp</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HHDUO8WjbLg?si=PNKp6y_V9uc4XLfU"></iframe>
     <p><strong>Description:</strong></p>
     <ul>
         <li>Includes features of <a href="#experiment1">Experiment #1</a>, upgraded to play randomised tones via a buzzer</li>
@@ -70,8 +71,29 @@
     </p>
     <p><a href="#top">(↑)</a></p>
 
-    <h2 id="experiment3">Experiment #3</h2>
-    <p>Experiment description here</p>
+    <h2 id="experiment3">Experiment #3: Temperature/Humidity sensor and two-colour LED indicator</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kyo9GANB1aY?si=_JxNTNiVvGpK6LtH"></iframe>
+    <ul>
+        <li>Uses a temperature and humidity sensor to calculate heat index. LED (starts at green) indicates if the environment is warming up (green->yellow->orange->red) or cooling down (reverse)</li>
+        <li>It's kind of, but not really real-time processing because the sensor is slow, so the visual feedback is delayed.</li>
+        <li>I tested this by breathing hot air on it to trigger temperature and humidity fluctuations.</li>
+        <li>Potential bug - I'm not sure why the LED colour turns yellow/orange immediately on load. It cools down eventually though. Is it something in my code, or is the component detecting a bump in temperature from my system running?</li>
+    </ul>
+    <p>
+        <strong>Modules Used:</strong>
+        <ul>
+            <li>DHT11 Temperature & Humidity Sensor</li>
+            <li>Two-colour LED</li>
+        </ul>
+        <strong>Libraries Used:</strong>
+        <ul>
+            <li>DHT Sensor Library by Adafruit</li>
+        </ul>
+    </p>
+    <p>
+        <strong>Code:</strong> <a href="./code/03_experiment/03_experiment.ino" target="_blank">03_experiment.ino</a>
+        
+    </p>
     <p><a href="#top">(↑)</a></p>
 
     <h2 id="experiment4">Experiment #4</h2>
