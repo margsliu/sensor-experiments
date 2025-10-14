@@ -22,15 +22,14 @@
         <li><a href="#experiment1">Experiment #1: Laser beam detection by photocell activates LED</a></li>
         <li><a href="#experiment2">Experiment #2: Laser beam detection by photocell activates LED + buzzer</a></li>
         <li><a href="#experiment3">Experiment #3: Temperature/Humidity sensor and two-colour LED indicator</a></li>
-        <li><a href="#experiment4">Experiment #4</a></li>
-        <li><a href="#experiment5">Experiment #5</a></li>
+        <li><a href="#experiment4">Experiment #4: Photo-interruptor + LCD 1602</a></li>
+        <li><a href="#experiment5">Experiment #5: LCD 1602</a></li>
     </ul>
 
     <h1>Experiments</h1>
 
     <h2 id="experiment1">Experiment #1: Laser beam detection by photocell activates LED</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mPqpC8U10ls?si=I2Y0RZ570r0WdlmW"></iframe>
-    <p><strong>Description:</strong></p>
     <ul>
         <li>LED turns on when photocell detects laser beam contact</li>
         <li>LED turns off when laser beam contact is broken</li>
@@ -42,20 +41,16 @@
             <li>Laser Emit</li>
         </ul>
     </p>
-    <p>
-        <strong>Code:</strong> <a href="./code/01_experiment/01_experiment.ino" target="_blank">01_experiment.ino</a>
-        
-    </p>
+    <p><strong>Code:</strong> <a href="./code/01_experiment/01_experiment.ino" target="_blank">01_experiment.ino</a></p>
     
     
     <p><a href="#top">(↑)</a></p>
 
-    <h2 id="experiment2">Experiment #2: Solo reverse laser harp</h2>
+    <h2 id="experiment2">Experiment #2: Laser beam detection by photocell activates LED + Buzzer</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/HHDUO8WjbLg?si=PNKp6y_V9uc4XLfU"></iframe>
-    <p><strong>Description:</strong></p>
     <ul>
-        <li>Includes features of <a href="#experiment1">Experiment #1</a>, upgraded to play randomised tones via a buzzer</li>
-        <li>The concept is loosely based on a laser harp, except I only have 1 laser and the buzzer plays unpredictable tones while laser beam maintains contact w photocell</li>
+        <li>Includes features of <a href="#experiment1">Experiment #1</a>, upgraded to play randomised tones via a buzzer.</li>
+        <li>The concept is loosely based on a laser harp, except I only have 1 laser and the laser needs to be manually aimed, and the buzzer plays unpredictable tones while laser beam maintains contact w photocell</li>
     </ul>
     <p>
         <strong>Modules Used:</strong>
@@ -65,10 +60,7 @@
             <li>Passive Buzzer</li>
         </ul>
     </p>
-    <p>
-        <strong>Code:</strong> <a href="./code/02_experiment/02_experiment.ino" target="_blank">02_experiment.ino</a>
-        
-    </p>
+    <p><strong>Code:</strong> <a href="./code/02_experiment/02_experiment.ino" target="_blank">02_experiment.ino</a></p>
     <p><a href="#top">(↑)</a></p>
 
     <h2 id="experiment3">Experiment #3: Temperature/Humidity sensor and two-colour LED indicator</h2>
@@ -82,7 +74,7 @@
     <p>
         <strong>Modules Used:</strong>
         <ul>
-            <li>DHT11 Temperature & Humidity Sensor</li>
+            <li>DHT11 Temperature & Humidity Module</li>
             <li>Two-colour LED</li>
         </ul>
         <strong>Libraries Used:</strong>
@@ -90,19 +82,65 @@
             <li>DHT Sensor Library by Adafruit</li>
         </ul>
     </p>
+    <p><strong>Code:</strong> <a href="./code/03_experiment/03_experiment.ino" target="_blank">03_experiment.ino</a></p>
+    <p><a href="#top">(↑)</a></p>
+
+    <h2 id="experiment4">Experiment #4: Photo-interruptor + LCD 1602</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PUk6a7n9xdU?si=YO0jUQsCA0aPPEoS"></iframe>
+    <ul>
+        <li>Tested different materials with the photo-interruptor module. High opacity = higher signal values.</li>
+        <li>LCD displays sensor value</li>
+    </ul>
+    <p><strong>Code:</strong> <a href="./code/04_experiment/04_experiment.ino" target="_blank">04_experiment.ino</a></p>
     <p>
-        <strong>Code:</strong> <a href="./code/03_experiment/03_experiment.ino" target="_blank">03_experiment.ino</a>
-        
+        <strong>Modules Used:</strong>
+        <ul>
+            <li>Photo-interruptor</li>
+            <li>LCD 1602 Module</li>
+        </ul>
+        <strong>Libraries Used:</strong>
+        <ul>
+            <li>LiquidCrystal</li>
+        </ul>
     </p>
     <p><a href="#top">(↑)</a></p>
 
-    <h2 id="experiment4">Experiment #4</h2>
-    <p>Experiment description here</p>
+    <h2 id="experiment5">Experiment #5: LCD 1602 Module</h2>
+    <ul>
+        <li>See <a href="#experiment4">Experiment #4</a> for LCD in action</li>
+        <li>The goal of this exercise was to get the LCD wired up and displaying text, and being able to adjust contrast with a potentiometer.</li>
+        <li>Displays a Hello World counter for how long the system has been running (in seconds)</li>
+        <li>The majority of this code isn't mine (I loaded in hello world code from arduino.cc docs), I just copied and pasted from the arduino.cc example and updated my pin references. </li>
+        <li>I noticed that my LCD screen is very sensitive to touch/wires being bumped which scrambles the input signal to the LCD</li>
+    </ul>
+    <p>
+        <strong>Modules Used:</strong>
+        <ul>
+            <li>LCD 1602 Module</li>
+        </ul>
+        <strong>Libraries Used:</strong>
+        <ul>
+            <li>LiquidCrystal</li>
+        </ul>
+    </p>
+    <p><strong>Code:</strong> <a href="./code/05_experiment/05_experiment.ino" target="_blank">05_experiment.ino</a></p>
     <p><a href="#top">(↑)</a></p>
 
-    <h2 id="experiment5">Experiment #5</h2>
-    <p>Experiment description here</p>
-    <p><a href="#top">(↑)</a></p>
+
+<!-- 
+    <p>
+        <strong>Modules Used:</strong>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+        <strong>Libraries Used:</strong>
+        <ul>
+            <li></li>
+        </ul>
+    </p> -->
+
+
 
 </body>
 
