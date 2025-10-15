@@ -24,17 +24,30 @@
         max-width: 900px;
         margin: 0 auto;
     }
+    img {
+        max-width: 560px;
+        height: auto;
+        margin-bottom: 20px;
+    }
 </style>
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 <body>
     <h1>Experiment Log</h1>
+    <br>
+        I have marked my more interesting experiments with a ★.
+        </br>
+        Some experiments are simply "can I get it to work?" tests,
+        </br>
+        and some experiments build on others and are slightly more complex.
+    </p>
     <h2 id="top">Table of Contents</h2>
     <ul>
         <li><a href="#experiment1">Experiment #1: Laser beam detection by photocell activates LED</a></li>
-        <li><a href="#experiment2">Experiment #2: Laser beam detection by photocell activates LED + buzzer</a></li>
-        <li><a href="#experiment3">Experiment #3: Temperature/Humidity sensor and two-colour LED indicator</a></li>
-        <li><a href="#experiment4">Experiment #4: Photo-interruptor + LCD 1602</a></li>
+        <li><a href="#experiment2">★ Experiment #2: Laser beam detection by photocell activates LED + buzzer</a></li>
+        <li><a href="#experiment3">★ Experiment #3: Temperature/Humidity sensor and two-colour LED indicator</a></li>
+        <li><a href="#experiment4">★ Experiment #4: Photo-interruptor + LCD 1602</a></li>
         <li><a href="#experiment5">Experiment #5: LCD 1602</a></li>
+        <li><a href="#experiment6">★ Experiment #6: Ultrasonic sensor + Active Buzzer + LCD 1602</a></li>
     </ul>
 
     <h2>Experiments</h2>
@@ -91,6 +104,21 @@
     </ul>
     <p><strong>Modules Used:</strong> LCD 1602 Module | <strong>Libraries Used:</strong> LiquidCrystal</p>
     <p><strong>Code:</strong> <a href="./code/05_experiment/05_experiment.ino" target="_blank">05_experiment.ino</a></p>
+    <p><a href="#top">(↑)</a></p>
+
+    <h3 id="experiment6">Experiment #6:  Ultrasonic Sensor + Active Buzzer + LCD 1602</h3>
+    
+    <img src="./images/06_experiment_photo.jpg" />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6wBitmbwbhE?si=v8AtNXFJKDMAjQr_"></iframe>
+    <ul>
+        <li>Ultrasonic sensor detects proximity and Active buzzer beeps more rapidly the closer you get.</li>
+        <li>Distance brackets: 0-5cm, 5-15cm, 15-20cm</li>
+        <li>Distance in cm displayed on LCD</li>
+        <li>Observation: Buzzer is unusually quiet, maybe because it is competing for power w/ other components?</li>
+        <li>In this experiment I realised I want to be able to run tasks asynchronously. Using delay() to space out the proximity reports holds up the entire loop (as designed), but I want the proximity report to update independently of the buzzer behaviour. I will look into this in further experiments</li>
+    </ul>
+    <p><strong>Modules Used:</strong> Ultrasonic sensor module, Active buzzer, LCD 1602 Module</p>
+    <p><strong>Code:</strong> <a href="./code/06_experiment/06_experiment.ino" target="_blank">06_experiment.ino</a></p>
     <p><a href="#top">(↑)</a></p>
 
 
