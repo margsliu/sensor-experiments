@@ -1,5 +1,5 @@
 // Experiment #6: Ultrasonic sensor module
-// Description: 
+// Description: Ultrasonic sensor detects proximity and Active buzzer beeps more rapidly the closer you get. Distance brackets: 0-5cm, 5-15cm, 15-20cm
 // Modules Used: Ultrasonic sensor module
 // Libraries Used: 
 // Comments: 
