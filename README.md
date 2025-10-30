@@ -1,4 +1,4 @@
-# Experiment Log: Teensy 4.0 Microcontroller + Sensor Modules
+# Experiment Log: Teensy 4.0 Microcontroller + Sensor Modules + Max MSP
 
 Browse content by visiting the Github Page: [https://margsliu.github.io/sensor-experiments/](https://margsliu.github.io/sensor-experiments/) or by downloading this repo and then opening index.html.
 
